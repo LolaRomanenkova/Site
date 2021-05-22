@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header{
+  z-index: 999;
+  position: fixed;
+  background: #2696E9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 200px;
+  transition: 0.5s ease;
+}
+
+header .brand{
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .navigation{
+  position: relative;
+}
+
+header .navigation .navigation-items a{
+  position: relative;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before{
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before{
+  width: 100%;
+}
+
+section{
+  padding: 100px 200px;
+}
+
+.home{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #2696E9;
+}
+
+.home:before{
+  z-index: 777;
+  content: '';
+  position: absolute;
+  background: rgba(3, 96, 251, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.home .content{
+  z-index: 888;
+  color: #fff;
+  width: 70%;
+  margin-top: 50px;
+  display: none;
+}
+
+.home .content.active{
+  display: block;
+}
+
+.home .content h1{
+  font-size: 4em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: 80px;
+}
+
+.home .content2 h1{
+  font-size: 4em;
+  font-weight: 900px;
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: 10px;
+  margin-top: 60px;
+}
+
+.home .content h1 span{
+  font-size: 1.2em;
+  font-weight: 500px;
+}
+
+.home .content2 h1 span{
+  font-size: 0.6em;
+  font-weight: 1000px;
+}
+
+.INFO{
+  width: 70vw;
+}
+
+.home .content p{
+  margin-bottom: 65px;
+}
+
+.home .content a{
+  background: #fff;
+  padding: 15px 13px;
+  color: #1680AC;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.home .media-icons{
+  z-index: 888;
+  position: absolute;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s ease;
+}
+
+.home .media-icons a{
+  color: #fff;
+  font-size: 1.6em;
+  transition: 0.3s ease;
+}
+
+.home .media-icons a:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.home .media-icons a:hover{
+  transform: scale(1.3);
+}
+
+.home video{
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-navigation{
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+  margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn{
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active{
+  background: #2696E9;
+}
+
+.slider-navigation .nav-btn:not(:last-child){
+  margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover{
+  transform: scale(1.2);
+}
+
+.video-slide{
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.video-slide.active{
+  clip-path: circle(150% at 0 50%);
+  transition: 2s ease;
+  transition-property: clip-path;
+}
+
+/* DOWN PANEL*/
+.containerDownPanel {
+    display: flex;
+    align-items: center;
+    background-color: #2696E9;
+    height: 120px;
+    width: 100%;
+
+}
+.box-1down {
+    width: 2 px;
+    color: white;
+    margin-left: 3vw;
+}
+.box-2down {
+    color: white;
+    margin-left: 22vw;
+    height: 2px;
+}
+.box-2down a {
+    padding: 5px;
+}
+.box-2down p {
+    margin-top: 30px;
+    text-align: center;
+}
+.box-3down {
+    color: white;
+    margin-left: 25.1vw;
+    height: 90px;
+    text-align: center;
+}
+.box-3down p {
+    margin-top: 10px;
+    text-align: center;
+}
+.box-3down a {
+    text-decoration: none;
+    color: white;
+    transition-duration: 0.5s;
+}
+.box-3down a:hover{
+    text-decoration: none;
+    color:#B0C4DE ;
+} /*DownPanel*/
+
+
+
+* {box-sizing: border-box;}
+
+.wrap {
+  width: 80vw;
+  margin: 50px auto 0;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+} 
+.box {
+  width: 22.8vw;
+  float: left;
+  margin-right: 1vw;
+}
+.top {
+  background: #36454A;
+  padding: 20px;
+  text-align: center;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+
+
+
+.price {
+  font-size: 70px;
+  font-weight: bold;
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+}
+
+.Cost{
+  font-size: 50px;
+}
+.price_span b{
+  font-size: 55px;
+}
+.price_span sup {
+  font-size: 24px;
+  position: relative;
+  top: -15px;
+  color: #6eaca7;
+}
+.price_span span {
+    font-size: 16px;
+    color: #6eaca7;
+    text-transform: uppercase;
+}
+
+.button {
+  text-decoration: none;
+  color: #6eaca7;
+  font-size: 18px;
+  border: 1px solid #6eaca7;
+  display: inline-block;
+  padding: 6px 12px;
+  line-height: 1.5;
+  text-align: center;
+  border-radius: 4px;
+  transition: 0.4s linear;
+}
+.button:hover {
+  color: white;
+  border-color: white;
+}
+.bottom {
+  padding: 20px 20px 40px;
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.bottom li{
+  border-bottom: 1px solid #e3e3e3;
+  color: #6eaca7;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.pic_about{
+  width: 70vw;
+  height: 43vw;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 3%;
+}
+
+/*Gallery zoom*/
+ul.gallery{     
+  display: flex;
+}
+
+.zoom {      
+  -webkit-transition: all 0.35s ease-in-out;    
+  -moz-transition: all 0.35s ease-in-out;    
+  transition: all 0.35s ease-in-out;     
+  cursor: -webkit-zoom-in;      
+  cursor: -moz-zoom-in;      
+  cursor: zoom-in;  
+
+  margin-top: 3.5vw;
+  margin-right: 5vw;
+  border-radius: 10px;
+}     
+
+.zoom:hover,  
+.zoom:active,   
+.zoom:focus {
+
+  -ms-transform: scale(2);    
+  -moz-transform: scale(2);  
+  -webkit-transform: scale(2);  
+  -o-transform: scale(2);  
+  transform: scale(2);    
+  position:relative;      
+  z-index:100;  
+}/*Gallery zoom*/
+
+
+/*Contact Icons*/
+.title{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-title{
+  position: relative;
+  color: #3a6cf4;
+  font-size: 2.2em;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+
+.contact .content .row{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.contact .content .row .card{
+  background: #fff;
+  width: 240px;
+  margin: 20px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+  border-radius: 10px;
+}
+
+.contact .content .row .card .contact-icon{
+  color: #3a6cf4;
+  font-size: 4em;
+  text-align: center;
+  transition: transform 0.5s ease;
+}
+
+.contact .content .row .card .info{
+  text-align: center;
+}
+
+.contact .content .row .card .info h3{
+  color: #111;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 10px;
+}
+
+.contact .content .row .card .info span{
+  color: #666;
+  font-weight: 500;
+}
+
+.contact-form{
+  background: #fff;
+  max-width: 600px;
+  margin-top: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+}
+
+.contact-form h3{
+  color: #111;
+  font-size: 1.6em;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-form .input-box{
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea{
+  color: #111;
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  font-weight: 400;
+  outline: none;
+  border: 1px solid #111;
+  border-radius: 5px;
+  resize: none;
+}
+
+.contact-form .input-box .send-btn{
+  color: #fff;
+  background: #3a6cf4;
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.contact-form .input-box .send-btn:hover{
+  background: #235bf6;
+}/*Contact Icons*/
+
+
+/*Table*/
+table {
+  width:100%;
+}
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+.table2 tr:nth-child(even) {
+  background-color: #eee;
+}
+.table2 tr:nth-child(odd) {
+ background-color: #fff;
+}
+.table2 th {
+  background-color: black;
+  color: white;
+}
+
+.table2 td{
+  color:black;
+}
+
+.table2{
+  margin-top: 30px;
+}
+/*Table*/
+
+/*Popup*/
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}/*Popup*/
+
